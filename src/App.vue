@@ -56,7 +56,7 @@ html, body {
 }
 
 .bg{
-  background: linear-gradient(0deg, rgb(196, 73, 0, 0.25), rgb(196, 73, 0, 0.1));
+  background: linear-gradient(0deg, rgb(196, 73, 0, 0.15), rgb(196, 73, 0, 0.1));
 }
 
 .v-container{

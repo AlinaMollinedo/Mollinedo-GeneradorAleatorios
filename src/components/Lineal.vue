@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 
+const form = ref()
 const isValid = ref(false)
 const submitted = ref(false)
 
@@ -44,13 +45,10 @@ const calc = () => {
 }
 
 const clear = () => {
-    isValid.value = false
+    form.value.reset()
+
     submitted.value = false
 
-    P.value = null
-    x0.value = null
-    k.value = null
-    c.value = null
     g.value = null
     m.value = null
     a.value = null
@@ -70,7 +68,7 @@ const moreDigits = () => {
 </script>
 
 <template>
-    <v-form v-model="isValid" @submit.prevent="calc()">
+    <v-form ref="form" v-model="isValid" @submit.prevent="calc()">
         <v-row class="mt-5">
             <v-col cols="12" sm="3">
                 <v-text-field
@@ -229,19 +227,19 @@ const moreDigits = () => {
     font-family: 'Funnel Display', sans-serif;
     font-size: larger;
     background-color: transparent;
-    color: #432534;
-    border: 2px solid #432534;
+    color: #072536;
+    border: 2px solid #072536;
     transition: all 0.5s ease;
 }
 
 .btn:disabled{
     background-color: transparent;
-    color: rgb(67, 37, 52, 0.4);
-    border: 2px solid rgb(67, 37, 52, 0.4);
+    color: rgb(7, 37, 54, 0.4);
+    border: 2px solid rgb(7, 37, 54, 0.4);
 }
 
 .btn:hover{
-    background-color: #432534;
+    background-color: #072536;
     color: #f8eedd;
 }
 
